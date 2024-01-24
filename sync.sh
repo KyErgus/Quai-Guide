@@ -109,7 +109,7 @@ echo 'export GO111MODULE=on' >> $HOME/.bash_profile
 echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile && . $HOME/.bash_profile
 git clone https://github.com/dominant-strategies/go-quai
 cd go-quai
-git checkout v0.28.1
+git checkout v0.28.2
 touch network.env
 echo '
 ZONE_0_0_COINBASE='$address'
@@ -208,8 +208,8 @@ CUSTOM_DATA_DIR=false
 DATA_DIR=' > network.env
 
 rm -rf ~/.quai
-wget http://backup.colosseum.quai.network/quai_colosseum_backup.tar.zst
-tar -I 'zstd -T0' -xvf quai_colosseum_backup.tar.zst
+wget http://backup.colosseum.quai.network/quai_colosseum_backup-1-16-24.tar.zst
+tar -I 'zstd -T0' -xvf quai_colosseum_backup-1-16-24.tar.zst
 cp -r quai-colosseum-backup ~/.quai
 rm -rf quai-colosseum-backup quai_colosseum_backup.tar.zst
 
